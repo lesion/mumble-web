@@ -10,7 +10,8 @@ window.mumbleWebConfig = {
     'token': true,
     'username': true,
     'password': true,
-    'channelName': false
+    'channelName': false,
+    'helpText': false
   },
   // Default values for user settings
   // You can see your current value by typing `localStorage.getItem('mumble.$setting')` in the web console.
@@ -36,6 +37,7 @@ window.mumbleWebConfig = {
     'joinDialog': false, // replace whole dialog with single "Join Conference" button
     'matrix': false, // enable Matrix Widget support (mostly auto-detected; implies 'joinDialog')
     'avatarurl': '', // download and set the user's Mumble avatar to the image at this URL
+    'helpText': 'Mumble is an open source, low-latency, high quality voice chat software. This is <b>mumble-web</b>, a mumble web client. Need help? Check for <a href="https://wiki.mumble.info/wiki/Main_Page">documentation</a> ',
     // General
     'theme': 'MetroMumbleLight',
     'startMute': false,

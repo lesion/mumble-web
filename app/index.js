@@ -117,6 +117,7 @@ function ConnectDialog () {
   self.visible = ko.observable(true)
   self.show = self.visible.bind(self.visible, true)
   self.hide = self.visible.bind(self.visible, false)
+  self.helpText = ko.observable('')
   self.connect = function () {
     self.hide()
     if (ui.detectWebRTC) {
@@ -1108,6 +1109,9 @@ function initializeUI () {
   }
   if (queryParams.channelName) {
     ui.connectDialog.channelName(queryParams.channelName)
+  }
+  if (queryParams.helpText) {
+    ui.connectDialog.helpText(queryParams.helpText)
   }
   if (queryParams.avatarurl) {
     // Download the avatar and upload it to the mumble server when connected
