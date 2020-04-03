@@ -12,6 +12,10 @@ module.exports = {
     theme: './app/theme.js',
     matrix: './app/matrix.js'
   },
+  devServer: {
+    contentBase: './dist',
+    hot: true
+  },
   devtool: "cheap-source-map",
   output: {
     path: path.join(__dirname, 'dist'),

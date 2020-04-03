@@ -58,6 +58,8 @@
     "web-audio-buffer-queue": "^1.1.0",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
     "worker-loader": "^2.0.0"
   },
   "optionalDependencies": {}
