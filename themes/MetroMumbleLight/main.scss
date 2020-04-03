@@ -446,6 +446,20 @@ form {
   top: calc(50% - 10px);
   left: calc(50% - 100px);
 }
+
+.connect-dialog {
+  max-width: 405px;
+}
+
+.connect-dialog p {
+  padding: 5px;
+  margin: 0px;
+  border-bottom: 1px solid $darkgray;
+}
+.connect-dialog a {
+  color: blue;
+}
+
 .connect-dialog input[type=text], select {
   font-size: 15px;
   border: 1px $dialog-input-border-color solid;
