@@ -44,13 +44,21 @@ import 'subworkers'
 
   function registerEventProxy (id, obj, event, transform) {
     obj.on(event, function (_) {
-      postMessage({
-        clientId: id.client,
-        channelId: id.channel,
-        userId: id.user,
-        event: event,
-        value: transform ? transform.apply(null, arguments) : Array.from(arguments)
-      })
+      if (event === 'error') {
+        postMessage({
+          clientId: id.client,
+          event,
+          value: 'Error'
+        })
+      } else {
+        postMessage({
+          clientId: id.client,
+          channelId: id.channel,
+          userId: id.user,
+          event: event,
+          value: transform ? transform.apply(null, arguments) : Array.from(arguments)
+        })
+      }
     })
   }
 

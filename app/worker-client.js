@@ -220,6 +220,9 @@ export class WorkerBasedMumbleClient extends EventEmitter {
       args[2] = args[2].map((id) => this._user(id))
       args[3] = args[3].map((id) => this._channel(id))
       args[4] = args[4].map((id) => this._channel(id))
+    } else if (name === 'error') {
+      this.emit('error', args)
+      return
     }
     args.unshift(name)
     this.emit.apply(this, args)
